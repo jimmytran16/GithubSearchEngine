@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/timeline.css">
+    <title>Repos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Local styling sheet -->
+    <link rel="stylesheet" href="css/repos/repos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- FONT AWESOME ICONS -->
+    <script src="https://use.fontawesome.com/011e08f9c3.js"></script>
+    <!-- font-family  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+      .wrapper{
+        background-color: #b9b9b9;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="row text-center text-white mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h5 class="intro-display display-4"><%=user%>'s Repositories <i class="fab fa-github-square"></i></h5>
+                <p class="lead mb-0"></p>
+            </div>
+        </div><!-- End -->
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <!-- Timeline -->
+                <ul class="timeline">
+                    <% for(var i = 0;i<repos.length;i++) {%>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h2-name"><%=repos[i]['fullname']%> <a target="_blank" href="<%=repos[i]['url']%>">Go
+                                to repo <i class="fas fa-link fa-2x"></i></a></h2><span class="small text-gray"><i
+                                class="fa fa-clock-o mr-1"></i><b>Last updated: </b><%=repos[i]['update']%></span>
+                        <p class="text-small mt-2 font-weight-light"><%=repos[i]['des']%></p>
+                    </li>
+                    <%}%>
+                    </ul><!-- End -->
+                </div>
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</body>
+</html>

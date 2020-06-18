@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/011e08f9c3.js"></script>
+  <title>Main</title>
+  <style>
+    /* Styles for wrapping the search box */
+    html {
+      background-color: #b9b9b9;
+    }
+
+    .main {
+      width: 25%;
+      margin: 50px auto;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+
+    /* Bootstrap 4 text input with search icon */
+
+    .has-search .form-control {
+      padding-left: 2.375rem;
+    }
+
+    .has-search .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <!-- Another variation with a button -->
+    <form action="/submit" method="GET">
+      <div class="input-group">
+        <input type="text" name="username" class="form-control" placeholder="Search for username on Github">
+        <div class="input-group-append">
+          <button class="btn btn-secondary" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <% if(typeof error !== 'undefined'){ %>
+      <span style="padding-left:5px;color:red;"><%= error %></span>
+    <% } %>
+  </div>
+</body>
+
+</html>

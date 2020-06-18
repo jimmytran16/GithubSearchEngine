@@ -1,0 +1,32 @@
+.h2-name a {
+    color: #337ab7 !important;
+    text-decoration: none;
+}
+
+.home-button {
+    color: white !important;
+}
+
+.intro-display {
+    padding-top: 40px !important;
+    color: #364452 !important;
+    width: 100%;
+}
+
+.h2-name {
+    color: #b79a0d;
+    font-size: 25px
+}
+
+.fa-2x {
+    font-size: large !important;
+}
+
+.display-4 {
+    font-size: 3.5rem !important;
+    margin-top: 40px;
+}
+
+.col-lg-7 {
+    width: 90% !important;
+}
