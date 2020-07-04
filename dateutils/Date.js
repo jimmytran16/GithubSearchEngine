@@ -1,5 +1,5 @@
 /* function to sort the date in descending order */
-function sortByDate(list){ 
+function sortByDate(list){
     list.sort(function(a, b){ /* This function will sort out the list based on the given dates in ascending order */
         var aa = a['update'].split('/').reverse().join(),
             bb = b['update'].split('/').reverse().join();
@@ -13,7 +13,7 @@ function formatDate(date){ /* This function is to format the date into MM/DD/YYY
     return date_split[1] + '/' + date_split[2] + '/' + date_split[0];
 }
 
-
+/* export the functions */
 module.exports = {
     sortByDate,
     formatDate

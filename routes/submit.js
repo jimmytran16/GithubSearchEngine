@@ -41,7 +41,7 @@ function getListOfRepos(data){
         };
         list.push(content);
     });
-    return date.sortByDate(list);
+    return date.sortByDate(list); /* returns the list sorted by the date */
 }
 
-module.exports = router;
+module.exports = router; /* export the router to be used in the main app file (index.js) */
