@@ -1,9 +1,7 @@
 /* function to sort the date in descending order */
 function sortByDate(list){
     list.sort(function(a, b){ /* This function will sort out the list based on the given dates in ascending order */
-        var aa = a['update'].split('/').reverse().join(),
-            bb = b['update'].split('/').reverse().join();
-        return aa < bb ? -1 : (aa > bb ? 1 : 0);
+        return new Date(a['update']) - new Date(b['update']);
     });
     return list.reverse() /* reverse the list so that it can be in descending order */
 }

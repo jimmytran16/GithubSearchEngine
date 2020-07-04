@@ -13,6 +13,9 @@ router.get('/',(req,res)=>{
         console.log(typeof(response.data));
         //make a function to get a list of url links to the repos
         list_of_repos = getListOfRepos(response.data);
+        for(let i = 0;i<list_of_repos.length;i++){
+          console.log(list_of_repos[i]['update']);
+        }
         res.render(path.join(__dirname,'../views','subpage.ejs'), {'repos':list_of_repos,'user':username,'length':list_of_repos.length});
     })
     .catch(error => {
